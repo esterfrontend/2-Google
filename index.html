@@ -9,9 +9,9 @@
     <meta property="og:title" content="Google">
     <meta property="og:description" content="Buscador de Google.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Google">
-    <meta property="og:url" content="https://www.google.com">
-    <meta property="og:image" content="https://lumiere-a.akamaihd.net/v1/images/image_0dbec56c_d153e3ae.jpeg">
+    <meta property="og:image" content="./img/logo-google.png">
+    <meta property="og:image:width" content="544">
+    <meta property="og:image:height" content="184">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon/favicon.ico">
@@ -33,213 +33,331 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-between vh-100">
+    <header class="d-flex align-items-center justify-content-between p-2 px-lg-4 py-lg-3">
+        
+        <!-- Menú configuración Moblie -->
+        <nav class="navbar navbar-expand-lg d-lg-none">
+            <button class="navbar-toggler bg-transparent border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="material-symbols-outlined">
+                    menu
+                </i>
+            </button>
 
-    
-    <div class="container">
-        <div class="row">
-            <header>
-                
-                <!-- Menú configuración Moblie -->
-                <nav class="navbar navbar-expand-md d-md-none navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        <i class="material-symbols-outlined">
-                            menu
-                        </i>
-                    </button>
-
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-                        aria-labelledby="offcanvasExampleLabel">
-                        <div class="offcanvas-body">
-                            <div>
-                                <h5>
-                                    <img src="./img/icon-google-24px.svg" alt="">
-                                    <span>Configuración de búsqueda</span>
-                                </h5>
-                                <ul class="">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="material-symbols-outlined">
-                                                history
-                                            </i>
-                                            <span class="nav-link--title">Personalización de la Busqueda</span>
-                                            <span class="nav-link--state">Activado</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="material-symbols-outlined">
-                                                visibility_off
-                                            </i>
-                                            <span class="nav-link--title">Búsqueda Segura</span>
-                                            <span class="nav-link--state">Desenfoque activado</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="material-symbols-outlined">
-                                                language
-                                            </i>
-                                            <span class="nav-link--title">Idioma</span>
-                                            <span class="nav-link--state">English</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="material-symbols-outlined">
-                                                dark_mode
-                                            </i>
-                                            <span class="nav-link--title">Tema oscuro</span>
-                                            <span class="nav-link--state">Desactivado</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="icon-link" href="#">
-                                            Más ajustes
-                                            <i class="material-symbols-outlined">
-                                                keyboard_arrow_right
-                                            </i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li class="">
-                                        <a class="" href="#">
-                                            <i class="material-symbols-outlined">
-                                                bookmarks
-                                            </i>
-                                            <span class="">Guardado</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a class="" href="#">
-                                            <i class="material-symbols-outlined">
-                                                feedback
-                                            </i>
-                                            <span class="">Enviar comentarios</span>
-                                        </a>
-                                    </li>
-                                    <li class="">
-                                        <a class="" href="#">
-                                            <i class="material-symbols-outlined">
-                                                lab_research
-                                            </i>
-                                            <span class="">Búsqueda avanzada</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-body p-0">
+                    <div class="p-4 border-bottom">
+                        <div class="offcanvas__title d-flex flex-row gap-3 mb-4">
+                            <img src="./img/icon-google-24px.svg" alt="Icono Google">
+                            <h2 class="h4 fw-normal">Configuración de búsqueda</h2>
                         </div>
+                        <ul class="m-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://myactivity.google.com/product/search?utm_source=google&utm_campaign=quick_settings&hl=es" title="Historial de búsqueda">
+                                    <i class="material-symbols-outlined">
+                                        history
+                                    </i>
+                                    <div>
+                                        <h3 class="nav-link--title">Historial de búsqueda</h3>
+                                        <span class="nav-link--state">No se están guardando</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/safesearch?hl=es&prev=https://www.google.es/webhp?sa%3DX%26sca_esv%3D587967043%26output%3Dsearch%26ved%3D0ahUKEwi0vqnNhviCAxXnTkEAHSnSCgsQ0tQDCBEoAA&authuser=0" title="Búsqueda segura">
+                                    <i class="material-symbols-outlined">
+                                        visibility_off
+                                    </i>
+                                    <div>
+                                        <h3 class="nav-link--title">Búsqueda Segura</h3>
+                                        <span class="nav-link--state">Desenfoque activado</span>
+                                    </div>    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/preferences?lang=1&hl=es&authuser=0&prev=https://www.google.es/webhp?sa%3DX%26sca_esv%3D587967043%26output%3Dsearch%26ved%3D0ahUKEwi0vqnNhviCAxXnTkEAHSnSCgsQ0tQDCBEoAA#langSec" title="Idioma">
+                                    <i class="material-symbols-outlined">
+                                        language
+                                    </i>
+                                    <div>
+                                        <h3 class="nav-link--title">Idioma</h3>
+                                        <span class="nav-link--state">English</span>
+                                    </div>    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/preferences?hl=es&authuser=0" title="Tema oscuro">
+                                    <i class="material-symbols-outlined">
+                                        dark_mode
+                                    </i>
+                                    <div>
+                                        <h3 class="nav-link--title">Tema oscuro</h3>
+                                        <span class="nav-link--state">Desactivado</span>
+                                    </div>    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="icon-link" href="https://www.google.es/preferences?hl=es&prev=https://www.google.es/webhp?sa%3DX%26sca_esv%3D587967043%26output%3Dsearch%26ved%3D0ahUKEwi0vqnNhviCAxXnTkEAHSnSCgsQ0tQDCBEoAA" title="Más ajustes">
+                                    Más ajustes
+                                    <i class="material-symbols-outlined">
+                                        keyboard_arrow_right
+                                    </i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </nav>
+                    <div class="p-4">
+                        <ul class="m-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/interests/saved?hl=es&authuser=0" title="Guardado">
+                                    <i class="icon-link material-symbols-outlined">
+                                        bookmarks
+                                    </i>
+                                    <span class="nav-link--title">Guardado</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/webhp?sa=X&sca_esv=587967043&output=search&ved=0ahUKEwi0vqnNhviCAxXnTkEAHSnSCgsQ0tQDCBEoAA" title="Enviar comentarios">
+                                    <i class="icon-link material-symbols-outlined">
+                                        feedback
+                                    </i>
+                                    <span class="nav-link--title">Enviar comentarios</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.google.es/advanced_search?hl=es" title="Búsqueda avanzada">
+                                    <i class="icon-link material-symbols-outlined">
+                                        lab_research
+                                    </i>
+                                    <span class="nav-link--title">Búsqueda avanzada</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="offcanvas-footer p-4">
+                    <a href="https://support.google.com/websearch/?visit_id=638373690627902160-1251819872&hl=es&rd=2#topic=3378866">Ayuda</a>
+                    <a href="https://policies.google.com/privacy?hl=es&fg=1">Privacidad</a>
+                    <a href="https://policies.google.com/terms?hl=es&fg=1">Términos</a> 
+                </div>
+            </div>
+        </nav>
 
-                <!-- Menú Desktop -->
-                <div class="d-none d-md-inline-block">
-                    <a href="">Sobre Google</a>
-                    <a href="">Tienda</a>
-                </div>
-
-                <!-- Menú compartido Desktop y Mobile -->
-                <div>
-                    <a href="" class="d-md-none">Todo</a>
-                    <a href="" class="d-none d-md-inline-block">Gmail</a>
-                    <a href="">Imágenes</a>
-                </div>
-
-                <div>
-                    <button class="google-apps">
-                        <img src="./img/icon-google-apps.svg" alt="">
-                    </button>
-                    <a class="btn btn-primary" href="">
-                        Iniciar sesión
-                    </a>
-                </div>
-            </header>
-
-
-            <main>
-                <div class="logo">
-                    <img style="width: 200px;" src="./img/logo-google.png" alt="Logotipo Google">
-                </div>
-                <form action="">
-                    <i class="material-symbols-outlined">
-                        search
-                    </i>
-                    <input type="text">
-                    <a href="">
-                        <img src="./img/icon-micro.svg" alt="Buscar por voz"></a>
-                    <a href="">
-                        <img src="./img/icon-pinture.svg" alt="Buscar por imagen"></a>
-                </form>
-                <div>
-                    <button>Buscar con Google</button>
-                    <button>Voy a tener suerte</button>
-                </div>
-                <div>
-                    <p>Ofrecio por Google en:</p>
-                    <a href="">catalá</a>
-                    <a href="">galego</a>
-                    <a href="">euskara</a>
-                </div>
-            </main>
-            
-            <footer>
-                <div>
-                    <p>España</p>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Tema oscuro: desactivado
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.google.es/preferences?hl=es">
-                                Configuración
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://policies.google.com/privacy?hl=es&fg=1">
-                                Privacidad
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://policies.google.com/terms?hl=es&fg=1">
-                                Términos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <a>
-                    <img src="./img/icon-climate.png" alt="">
-                    <p>Tres décadas de acción climática: descubre lo que estamos haciendo</p>
-                </a>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="https://www.google.es/intl/es_es/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
-                                Publicidad
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.google.es/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">
-                                Empresa
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://about.google/?utm_source=google-ES&utm_medium=referral&utm_campaign=hp-footer&fg=1">
-                                Sobre Google
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+        <!-- Menú Desktop -->
+        <div class="d-none d-lg-inline-block">
+            <a href="https://about.google/?fg=1&utm_source=google-ES&utm_medium=referral&utm_campaign=hp-header" class="fs-6 me-3">Sobre Google</a>
+            <a href="https://store.google.com/ES/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=es&pli=1" class="fs-6">Tienda</a>
         </div>
-    </div>
+
+        <!-- Menú compartido Desktop y Mobile -->
+        <div class="navbar__menu d-flex justify-content-between align-items-center">
+            <div class="navbar__links">
+                <a href="#" class="active d-lg-none">Todo</a>
+                <a href="https://mail.google.com/mail/u/0/" class="d-none d-lg-inline-block me-3">Gmail</a>
+                <a href="https://www.google.es/webhp?sa=X&sca_esv=587967043&output=search&tbm=isch&tbo=u&ved=0ahUKEwivhayohviCAxVISUEAHVK-DVkQ0tQDCBMoAQ" class="">Imágenes</a>
+            </div>
+
+            <div class="d-inline-flex align-items-center ms-4">
+                <button type="button" class="google-apps d-inline-flex align-items-center justify-content-center bg-transparent border-0 rounded-circle me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-symbols-outlined text-secondary">
+                        apps
+                    </i>
+                </button>
+                <ul class="apps__dropdown dropdown-menu overflow-hidden text-center">
+                    <div class="apps__content overflow-y-scroll">
+                        <div class="apps__list row m-0 p-4">
+                            <li class="col-4 p-1">
+                                <a href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app">
+                                    <i id="icon--account"></i>
+                                    <span>Cuenta</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://www.google.com/">
+                                    <i id="icon--google"></i>
+                                    <span>Búsqueda</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://maps.google.com/"">
+                                    <i id="icon--maps"></i>
+                                    <span>Maps</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://www.youtube.com">
+                                    <i id="icon--youtube"></i>
+                                    <span>Youtube</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://play.google.com/">
+                                    <i id="icon--play"></i>
+                                    <span>Play</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://news.google.com">
+                                    <i id="icon--news"></i>
+                                    <span>Noticias</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://mail.google.com/mail/">
+                                    <i id="icon--gmail"></i>
+                                    <span>Gmail</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://meet.google.com?hs=197">
+                                    <i id="icon--meet"></i>
+                                    <span>Meet</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://chat.google.com">
+                                    <i id="icon--chat"></i>
+                                    <span>Chat</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://contacts.google.com/">
+                                    <i id="icon--contacts"></i>
+                                    <span>Contactos</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://drive.google.com/">
+                                    <i id="icon--drive"></i>
+                                    <span>Drive</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://calendar.google.com/calendar">
+                                    <i id="icon--calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://translate.google.com/">
+                                    <i id="icon--translate"></i>
+                                    <span>Traductor</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://photos.google.com/">
+                                    <i id="icon--photos"></i>
+                                    <span>Fotos</span>
+                                </a>
+                            </li>
+                            <li class="col-4 p-1">
+                                <a href="https://www.google.com/shopping?source=og">
+                                    <i id="icon--shopping"></i>
+                                    <span>Shopping</span>
+                                </a>
+                            </li>
+                        </div>
+                        <a href="" class="apps__button btn border-secondary rounded-pill my-4 px-4 py-2 text-decoration-none">Más de Google</a>
+                    </div>
+                </ul>
+                <button class="my-account border-0 rounded-circle text-white fs-5 fw-light">
+                    <span>E</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="text-center px-3 mb-5">
+        <div class="logo">
+            <img src="./img/logo-google-navidad.gif" alt="Logotipo Google">
+        </div>
+        <form action="" method="" class="mx-auto mt-3 mb-5">
+            <fieldset class="form-input d-flex align-items-center rounded-pill border mb-4 px-3">
+                <i class="form__icon-search material-symbols-outlined">
+                    search
+                </i>
+                <div class="w-100 ms-3">
+                    <input type="text" name="busqueda" autofocus="autofocus" class="w-100 fs-5 border-0"></input>
+                </div>
+                <button class="form__icon-search-by me-3" title="Buscar por voz">
+                    <img class="img-fluid" src="./img/icon-micro.svg" alt="Icono buscar por voz">
+                </button>
+                <button class="form__icon-search-by" title="Buscar por imagen">
+                    <img class=" img-fluid" src="./img/icon-pinture.svg" alt="Icono buscar por imagen">
+                </button>
+            </fieldset>
+            <div class="form__buttons d-none d-lg-inline-block">
+                <button type="submit" class="btn btn-light">Buscar con Google</button>
+                <button type="submit" class="btn btn-light">Voy a tener suerte</button>
+            </div>
+            <div class="form__other-languages my-4">
+                <span>Ofrecido por Google en:</span>
+                <a href="https://www.google.com/setprefs?sig=0_-mjkEHQeoQghZpUjAl9n9dCgrZI%3D&hl=ca&source=homepage&sa=X&ved=0ahUKEwj5gYjj_vWCAxUDVKQEHRNjC2YQ2ZgBCBQ">catalá</a>
+                <a href="https://www.google.com/setprefs?sig=0_-mjkEHQeoQghZpUjAl9n9dCgrZI%3D&hl=gl&source=homepage&sa=X&ved=0ahUKEwj5gYjj_vWCAxUDVKQEHRNjC2YQ2ZgBCBU">galego</a>
+                <a href="https://www.google.com/setprefs?sig=0_-mjkEHQeoQghZpUjAl9n9dCgrZI%3D&hl=eu&source=homepage&sa=X&ved=0ahUKEwj5gYjj_vWCAxUDVKQEHRNjC2YQ2ZgBCBY">euskara</a>
+            </div>
+        </form>
+    </main>
+    
+    <footer class="bg-light">
+        <div class="py-3 px-4 border-bottom">
+            <span>España</span>
+        </div>
+        <div class="footer__content d-flex flex-wrap flex-column flex-lg-row pb-3">
+            <div class="footer__climate order-xxl-2 my-3 py-2 px-4 border-bottom">
+                <a class="d-none d-lg-flex justify-content-center align-items-center" href="https://sustainability.google/intl/es/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=#home" title="Acción climática">
+                    <img src="./img/icon-climate.png" alt="Icono acción climática">
+                    <p class="ps-2 mb-0">Tres décadas de acción climática: descubre lo que estamos haciendo</p>
+                </a>
+            </div>
+            <ul class="order-lg-3 order-xxl-3 d-flex flex-wrap justify-content-center gap-3 p-0 m-0 px-4">
+                <li class="d-lg-none">
+                    <a href="#" title="Activar y desactivar modo oscuro">
+                        Tema oscuro: desactivado
+                    </a>
+                </li>
+                <li class="order-xxl-2">
+                    <a href="https://www.google.es/preferences?hl=es">
+                        Configuración
+                    </a>
+                </li>
+                <li>
+                    <a href="https://policies.google.com/privacy?hl=es&fg=1">
+                        Privacidad
+                    </a>
+                </li>
+                <li>
+                    <a href="https://policies.google.com/terms?hl=es&fg=1">
+                        Términos
+                    </a>
+                </li>
+            </ul>
+            <ul class="order-lg-2 order-xxl-1 d-flex flex-wrap justify-content-center gap-3 p-0 m-0 px-4">
+                <li>
+                    <a href="https://www.google.es/intl/es_es/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+                        Publicidad
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.es/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">
+                        Empresa
+                    </a>
+                </li>
+                <li class="d-lg-none">
+                    <a href="https://about.google/?utm_source=google-ES&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+                        Sobre Google
+                    </a>
+                </li>
+                <li class="d-none d-lg-inline">
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1">
+                        Cómo funciona la Búsqueda
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
